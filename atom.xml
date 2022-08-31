@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>test</title>
+    <link href="/2022/09/02/test2/"/>
+    <id>/2022/09/02/test2/</id>
+    <published>2022-09-02T14:16:01.000Z</published>
+    <updated>2022-08-31T12:36:56.586Z</updated>
+    
+    <summary type="html">
+    
+      测试新建文章
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo-Theme-Sakura</title>
     <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
     <id>/2018/12/12/Hexo-Theme-Sakura/</id>
