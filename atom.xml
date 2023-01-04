@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2023-01-04T03:35:08.973Z</updated>
+  <updated>2023-01-04T03:40:17.553Z</updated>
   <id>/</id>
   
   <author>
@@ -17,52 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="/2023/01/04/HelloOS/"/>
-    <id>/2023/01/04/HelloOS/</id>
-    <published>2023-01-04T03:36:53.201Z</published>
-    <updated>2023-01-04T03:35:08.973Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;title: HelloOS
-author: Covenant
-avatar: https://cdn.jsdelivr.net/gh/1longlong/cdn/img/custom/avatar.jpg
-authorLink:
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
+    <title>HelloOS</title>
     <link href="/2023/01/04/OS/HelloOS/"/>
     <id>/2023/01/04/OS/HelloOS/</id>
-    <published>2023-01-04T03:11:56.224Z</published>
-    <updated>2023-01-04T03:35:08.973Z</updated>
+    <published>2023-01-04T02:35:10.000Z</published>
+    <updated>2023-01-04T03:40:17.553Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;title: HelloOS
-author: Covenant
-avatar: https://cdn.jsdelivr.net/gh/1longlong/cdn/img/custom/avatar.jpg
-authorLink:
-        
-      
+      OS第一篇
     
     </summary>
     
+      <category term="OS" scheme="/categories/OS/"/>
+    
+    
+      <category term="OS" scheme="/tags/OS/"/>
     
   </entry>
   
@@ -93,7 +63,7 @@ authorLink:
     <link href="/2018/12/12/Hexo-Theme-Sakura/"/>
     <id>/2018/12/12/Hexo-Theme-Sakura/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2022-08-31T12:21:48.850Z</updated>
+    <updated>2023-01-04T03:40:19.300Z</updated>
     
     <summary type="html">
     
