@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2022 | Covenant</title>
+  <title itemprop="name">Covenant</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -318,123 +318,159 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
 <div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2023年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      01月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2023/01/04/OS/HelloOS/">
-                          <span style="color:#0bf;">
-                          04日11:11:56</span>
-                          
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      09月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/09/02/resources/resource/">
-                          <span style="color:#0bf;">
-                          02日22:16:01</span>
-                          resourceTest
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2018年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-                          <span style="color:#0bf;">
-                          12日22:16:01</span>
-                          Hexo-Theme-Sakura
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title"></h1>
+            <p class="entry-census">&nbsp;·&nbsp;2023-1-4&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <pre><code class="yaml">title: resourceTest
+author: Covenant
+avatar: https://cdn.jsdelivr.net/gh/1longlong/cdn/img/custom/avatar.jpg
+authorLink: Covenant.cn
+categories: OS
+date: 2023-01-04 10:35:10
+comments: true
+tags: 
+- OS
+keywords: OS
+description: OS第一篇
+photos: https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_coverage.jpg
+</code></pre>
+<h1 id="HelloOS"><a href="#HelloOS" class="headerlink" title="HelloOS"></a>HelloOS</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li><p>虚拟机环境：VMware + Ubuntu18  </p>
+</li>
+<li><p>工具：gcc,nasm,make,git  </p>
+</li>
+</ul>
+<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="PC机引导流程"><a href="#PC机引导流程" class="headerlink" title="PC机引导流程"></a>PC机引导流程</h3><p><img src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_1/1.png" alt></p>
+<ul>
+<li><p>加载BIOS,包含CPU、内存、硬件等信息</p>
+</li>
+<li><p>读取MBR(主引导记录)，大概率位于第一个扇区，包含分区表等信息，将其加载到0x7c00的物理内存空间，作为Boot Loader,Boot Loader有多种，包括GRUB、Lilo等，它是在操作系统内核运行前运行的一段程序，可以初始化硬件设备，建立内存空间的映射布局，为调用操作系统内核做准备</p>
+</li>
+<li><p>加载内核</p>
+<p>根据grub设定的内核映像所在路径，系统读取内存映像，并进行解压缩操作。此时，屏幕一般会输出“Uncompressing Linux”的提示。当解压缩内核完成后，屏幕输出“OK, booting the kernel”。<br>系统将解压后的内核放置在内存之中，并调用start_kernel()函数来启动一系列的初始化函数并初始化各种设备，完成Linux核心环境的建立。至此，Linux内核已经建立起来了，基于Linux的程序应该可以正常运行了。</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://blog.csdn.net/JackLiu16/article/details/79881207" target="_blank" rel="noopener">MBR/BOOT和GRUB三者关系总结（系统启动过程）_JackLiu16的博客-CSDN博客_mbr和grub</a></p>
+</blockquote>
+<h3 id="OS编译过程"><a href="#OS编译过程" class="headerlink" title="OS编译过程"></a>OS编译过程</h3><p><img title src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_1/2.png" alt width="531"></p>
+<h3 id="OS安装过程"><a href="#OS安装过程" class="headerlink" title="OS安装过程"></a>OS安装过程</h3><p>make后可以得到OS的可执行bin文件，下一步需要在GRUB引导时，找到它并执行，因此这里直接将安装程序写在grub.cfg文件里，在执行时，会先显示启动项，这时就可以选择HelloOS来启动，GRUB就会根据安装程序中os的位置，加载os文件到内存。</p>
+<p>安装程序：</p>
+<pre><code class="shell">menuentry &#39;HelloOS&#39; {
+     insmod part_msdos #GRUB加载分区模块识别分区
+     insmod ext2 #GRUB加载ext文件系统模块识别ext文件系统
+     set root=&#39;hd0,msdos4&#39; #注意boot目录挂载的分区，这是我机器上的情况
+     multiboot2 /boot/HelloOS.bin #GRUB以multiboot2协议加载HelloOS.bin
+     boot #GRUB启动HelloOS.bin
+}
+</code></pre>
+<h2 id="内核架构"><a href="#内核架构" class="headerlink" title="内核架构"></a>内核架构</h2><p>微内核</p>
+<p>仅将进程管理、内存管理、中断等作为服务进程放进内核，进程间通过消息进行通信，性能差，但易扩展</p>
+<p>宏内核</p>
+<p>将各种功能放入内核，性能强，但耦合高，难移植和扩展</p>
+<p>组合型内核</p>
+<p><img src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_1/3.png" alt></p>
+<h2 id="Linux内核"><a href="#Linux内核" class="headerlink" title="Linux内核"></a>Linux内核</h2><p><img title src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_1/4.png" alt width="829"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/OS/OS_1/5.png" alt></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/09/02/resources/resource/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/resource/resourceTest.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/1longlong/cdn/img/articles/resource/resourceTest.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                resourceTest</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Kx4tRDVQ3RIdAhpsCGc25oUz-gzGzoHsz",
+        appKey: "Y5yDY8pvXjCFxQ2uR273FOkN",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
